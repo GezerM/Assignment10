@@ -15,12 +15,13 @@ public class A10_Q19_CountJava {
 	public static int countJava(String str) {
 		
 		
+		str = str.toLowerCase();
 		int count = 0;
-		int nextJ = str.toLowerCase().indexOf("java");
+		int nextJ = str.indexOf("java");
 		
 		while (nextJ != -1) {
 			count++;
-			nextJ = str.toLowerCase().indexOf("java", nextJ + 1);
+			nextJ = str.indexOf("java", nextJ + 1);
 		}
 		
 		return count;
