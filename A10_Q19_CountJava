@@ -1,0 +1,27 @@
+
+public class A10_Q19_CountJava {
+
+	public static void main(String[] args) {
+		// Return the number of times that the string "java" appears anywhere in the given string word.
+		
+		System.out.println("Input:  javaxjava");
+		System.out.println("Output: " + countJava("javaxjava"));
+		
+		System.out.println("Input:  javaxjavaapplepearjavaegg");
+		System.out.println("Output: " + countJava("javaxjavaapplepearjavaegg"));
+
+	}
+	
+	public static int countJava(String str) {
+		
+		
+		int count = 0;
+		int nextJ = str.toLowerCase().indexOf("java");
+		
+		while (nextJ != -1) {
+			count++;
+			nextJ = str.toLowerCase().indexOf("java", nextJ + 1);
+		}
+		
+		return count;
+	}
