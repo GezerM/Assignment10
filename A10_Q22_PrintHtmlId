@@ -17,9 +17,10 @@ public class A10_Q22_PrintHtmlId {
 		int indexID = str.indexOf("id");
 		boolean attribute = str.contains("<html>");
 		String iD;
+		int indexC;
 		if (indexID > 0 && attribute) {
-			int indexC = str.indexOf("\"", indexID + 4);
-			 iD = str.substring(indexID + 4, indexC);
+			indexC = str.indexOf("\"", indexID + 4);
+			iD = str.substring(indexID + 4, indexC);
 			
 		} else {
 			iD = "Invalid input!";
