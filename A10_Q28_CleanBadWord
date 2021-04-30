@@ -6,9 +6,12 @@ public class A10_Q28_CleanBadWord {
 		// Basically what it does is take out all the occurrences of badWord in text.
 		
 	System.out.println(clean ("one two three","two"));
+	System.out.println(cleanX ("one two three","two ")); // second version of method doing the same thing
 	
 	System.out.println(clean ("foo bar","foo"));
+	System.out.println(clean ("foo bar","foo "));
 	
+	System.out.println(clean ("he said bla bla bla","bla"));
 	System.out.println(clean ("he said bla bla bla","bla"));
 
 	}
@@ -26,4 +29,9 @@ public class A10_Q28_CleanBadWord {
 		trimmed += text.substring(start).trim();
 		
 		return trimmed;
+	}
+	public static String cleanX(String text, String badWord) { // second version of method doing the same thing
+		text = text.replaceAll(badWord, "");
+		text = text.replaceAll("  ", " ").trim();
+		return text;
 	}
