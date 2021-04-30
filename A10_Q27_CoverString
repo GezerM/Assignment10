@@ -14,11 +14,27 @@ Your job is to write an important code that will :
 		 */
 		
 	System.out.println(coverString("java methods", "me"));
+	System.out.println(coverItAgain("java methods", "me")); // This version works with replace()
+	
 	
 	System.out.println(coverString("Certified Wooden Spoon", "o"));
+	System.out.println(coverItAgain("Certified Wooden Spoon", "o"));
 	
 	System.out.println(coverString("apples", "pears"));
+	System.out.println(coverItAgain("apples", "pears"));
 
+	}
+	public static String coverItAgain(String strLong, String strShort) { // second version of method doing the same thing
+		
+		if (!strLong.contains(strShort)) {
+			strLong = "[" + strLong + "]";
+		} else {
+		
+				strLong = strLong.replace(strShort, "[" + strShort + "]");
+			
+		
+		}
+		return strLong;
 	}
 	public static String coverString(String strSr, String strJr) {
 		
